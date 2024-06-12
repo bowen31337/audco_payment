@@ -5,5 +5,4 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   base: '/audco_payment/',  // Replace with your repository name
-
 })

@@ -14,7 +14,7 @@ import tokenAbi from "./donateAbi.json";
 const tokenAddress = "0xffD22536cf2F2b62480BcBB95fe6c1b8Ea0FA8F0";
 
 const Donation: React.FC = () => {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(100);
   const [recipient, setRecipient] = useState(
     "0x64e830dd7aF93431C898eA9e4C375C6706bd0Fc5"
   );
