@@ -1,9 +1,9 @@
 {
-  "name": "shopping-cart",
+  "name": "audco_payment",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://bowen31337.github.com/audco_payment",
+  "homepage": "https://bowen31337.github.io/audco_payment",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
