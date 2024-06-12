@@ -1,0 +1,31 @@
+.donation {
+    padding: 20px;
+  }
+  
+  .donation .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .donation .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .donation .form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .donation button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .donation button:hover {
+    background-color: #0056b3;
+  }
+  

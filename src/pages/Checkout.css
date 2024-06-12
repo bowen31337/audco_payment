@@ -1,0 +1,40 @@
+.checkout {
+    padding: 20px;
+  }
+  
+  .checkout ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .checkout ul li {
+    margin-bottom: 10px;
+  }
+  
+  .checkout .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .checkout .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .checkout .form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .checkout button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .checkout button:hover {
+    background-color: #0056b3;
+  }
+  
