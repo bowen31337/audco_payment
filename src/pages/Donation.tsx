@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Donation.css";
 import {
   useAccount,
@@ -10,6 +10,7 @@ import { parseUnits } from "viem";
 import { Wallet } from "../components/ConnectWallet";
 
 import tokenAbi from "./donateAbi.json";
+import { generateQrCode } from "../utils/generateQrCode";
 
 const tokenAddress = "0xffD22536cf2F2b62480BcBB95fe6c1b8Ea0FA8F0";
 
@@ -44,6 +45,10 @@ const Donation: React.FC = () => {
   });
 
   console.log({ data, error, readError, readPending });
+
+  useEffect(()=>{
+    generateQrCode(amount, recipient);
+  },[amount,recipient])
 
   const handleDonate = async () => {
     console.log({ tokenAbi, tokenAddress, amount });
@@ -93,6 +98,7 @@ const Donation: React.FC = () => {
             required
           />
         </div>
+        <div id="qr-code"/>
 
         {isConnected && (
           <button type="button" onClick={handleDonate}>
