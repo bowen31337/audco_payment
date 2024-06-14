@@ -10,7 +10,8 @@ import { parseUnits } from "viem";
 import { Wallet } from "../components/ConnectWallet";
 
 import tokenAbi from "./donateAbi.json";
-import { generateQrCode } from "../utils/generateQrCode";
+import { deepLinkGen, generateQrCode } from "../utils/generateQrCode";
+import QRCodeComponent from "../components/QRCodeComponent";
 
 const tokenAddress = "0xffD22536cf2F2b62480BcBB95fe6c1b8Ea0FA8F0";
 
@@ -46,9 +47,9 @@ const Donation: React.FC = () => {
 
   console.log({ data, error, readError, readPending });
 
-  useEffect(()=>{
+  useEffect(() => {
     generateQrCode(amount, recipient);
-  },[amount,recipient])
+  }, [amount, recipient]);
 
   const handleDonate = async () => {
     console.log({ tokenAbi, tokenAddress, amount });
@@ -94,11 +95,16 @@ const Donation: React.FC = () => {
             type="number"
             id="amount"
             value={amount}
-            onChange={(e) => setAmount(parseInt(e.target.value))}
+            onChange={(e) => setAmount(parseInt(e.target.value || "0"))}
             required
           />
         </div>
-        <div id="qr-code"/>
+        {/* <div id="qr-code" /> */}
+        <QRCodeComponent
+          text={deepLinkGen(amount, recipient)}
+          width={300}
+          height={300}
+        />
 
         {isConnected && (
           <button type="button" onClick={handleDonate}>
