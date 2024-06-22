@@ -31,7 +31,7 @@ const QRCodeComponent: React.FC<QRCodeProps> = ({
         height,
         colorDark: "#000000",
         colorLight: "#ffffff",
-        correctLevel: EasyQRCode.CorrectLevel.H, // L, M, Q, H
+        correctLevel: EasyQRCode.CorrectLevel.L, // L, M, Q, H
 
         // ====== dotScale
         dotScale: 0.5, // For body block, must be greater than 0, less than or equal to 1. default is 1
